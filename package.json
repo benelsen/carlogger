@@ -11,6 +11,8 @@
     "jade": "latest",
     "socket.io": "latest",
     "gpio": "latest",
-    "serialport": "latest"
+    "serialport": "latest",
+    "jog": "latest",
+    "underscore": "latest"
   }
 }
