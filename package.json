@@ -1,0 +1,16 @@
+{
+  "name": "obdgpslogger",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "async": "latest",
+    "express": "latest",
+    "jade": "latest",
+    "socket.io": "latest",
+    "gpio": "latest",
+    "serialport": "latest"
+  }
+}
