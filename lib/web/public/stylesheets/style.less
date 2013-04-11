@@ -1,0 +1,35 @@
+@import "../../components/bootstrap/less/bootstrap";
+// @import "../../components/bootstrap/less/responsive";
+
+body {
+  margin-top: 20px;
+}
+
+table.data td:nth-of-type(2) {
+  font-family: @font-family-monospace;
+  font-weight: bold;
+}
+
+.log-control {
+  button {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.form-horizontal .control-group > .controls {
+  margin-left: 5%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .form-horizontal .control-group > .control-label {
+    width: 15%;
+  }
+
+  .form-horizontal .control-group > .controls {
+    margin-left: 20%;
+  }
+
+}

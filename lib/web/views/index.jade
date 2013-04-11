@@ -1,0 +1,155 @@
+extends layout
+
+block content
+  div.row
+    ul.col-span-12.list-inline.text-center
+      li
+        span.label.js-sys-status SYS
+      li
+        span.label.js-log-status LOG
+      li
+        span.label.js-gps-status GPS
+      li
+        span.label.js-obd-status OBD
+
+  div.row
+    div.col-span-6.col-offset-3
+      div.text-center.log-control
+        button.btn.btn-large.btn-success.disabled.js-log-start Start
+        button.btn.btn-large.btn-success.hide.disabled.js-log-resume Resume
+        button.btn.btn-large.btn-warning.hide.disabled.js-log-pause Pause
+        button.btn.btn-large.btn-danger.disabled.js-log-stop Stop
+
+  div.row
+    div.col-span-4
+      h3 GPS
+      table.table.table-condensed.table-striped.data.gps
+        tr
+          td Latitude
+          td.lat 0.00000°
+        tr
+          td Longitude
+          td.lon 0.00000°
+        tr
+          td Altitude
+          td.alt 0.0 m
+        tr
+          td Speed
+          td.spd 0.0 km/h
+        tr
+          td Course
+          td.crs 000.0°
+        tr
+          td HDOP
+          td.hdop 0.0
+        tr
+          td Satellites
+          td.sats 0
+
+    div.col-span-4
+      h3 OBD
+      table.table.table-condensed.table-striped.data.obd
+        tr
+          td Speed
+          td.spd 0.0 km/h
+        tr
+          td RPM
+          td.rpm 0 1/min
+        tr
+          td Economy
+          td.eco 0 L/100km
+        tr
+          td Load
+          td.load 0.00 %
+        tr
+          td Coolant Temp
+          td.coolantTemp 0 °C
+        tr
+          td Intake Temp
+          td.intakeTemp 0 °C
+        tr
+          td Intake Pressure
+          td.intakeManAbsPress 0
+        tr
+          td Fuel Pressure
+          td.fuelPress 0
+        tr
+          td Air Flow Rate
+          td.maf 0.00
+
+    div.col-span-4
+      h3 LOG
+      table.table.table-condensed.table-striped.data.log
+        tr
+          td Started
+          td.start 00:00:00
+        tr
+          td Time Enroute
+          td.time 00:00:00
+        tr
+          td Distance
+          td.dst 0.0 km
+        tr
+          td GPS Positions
+          td.gpsPositions 123
+        tr
+          td OBD Queries
+          td.obdQueries 123
+
+  div.row
+    div.col-span-12
+      h1 Settings
+
+  div.row
+
+    div.col-span-6
+      div.panel
+        div.panel-heading GPS
+        form.form-horizontal
+
+          //- div.control-group
+          //-   label.control-label Status
+          //-   div.controls
+          //-     span.input-xlarge.uneditable-input Connected
+
+          //- div.control-group
+          //-   label.control-label(for="gpsDevice") Device
+          //-   div.controls
+          //-     div.input-group
+          //-       span.input-group-addon /dev/
+          //-       input#gpsDevice(type="text", placeholder="ttyAMA0", value="ttyAMA0")
+          //-       div.input-group-btn
+          //-         button.btn Set
+
+          div.control-group
+            label.control-label
+            div.controls
+              button.btn.btn-success(type="button").js-gps-connect Connect
+              | &nbsp;
+              button.btn.btn-danger(type="button").js-gps-disconnect.disabled Disconnect
+
+    div.col-span-6
+      div.panel
+        div.panel-heading OBD
+        form.form-horizontal
+
+          //- div.control-group
+          //-   label.control-label Status
+          //-   div.controls
+          //-     span.input-xlarge.uneditable-input Connected
+
+          //- div.control-group
+          //-   label.control-label(for="gpsDevice") Device
+          //-   div.controls
+          //-     div.input-group
+          //-       span.input-group-addon /dev/
+          //-       input#gpsDevice(type="text", placeholder="ttyUSB0", value="ttyUSB0")
+          //-       div.input-group-btn
+          //-         button.btn Set
+
+          div.control-group
+            label.control-label
+            div.controls
+              button.btn.btn-success(type="button").js-obd-connect Connect
+              | &nbsp;
+              button.btn.btn-danger(type="button").js-obd-disconnect.disabled Disconnect

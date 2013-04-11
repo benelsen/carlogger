@@ -1,6 +1,26 @@
-node_modules
 
+# exclude config
+config.json
+
+# exclude logs
 *.log
 
+# other
+deploy-rpi.sh
+savelogs.sh
+sequence.js
+
+# not included for now
 examples
 simulator
+
+# package mangager
+node_modules
+components
+
+# 3rd party
+vendor
+
+lib/web/public/img/glyphicons-halflings-white.png
+
+lib/web/public/img/glyphicons-halflings.png

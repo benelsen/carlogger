@@ -1,18 +1,18 @@
 {
-  "name": "obdgpslogger",
+  "name": "carlogger",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node index"
   },
   "dependencies": {
-    "async": "latest",
     "express": "latest",
     "jade": "latest",
+    "less-middleware": "latest",
     "socket.io": "latest",
+    "async": "latest",
     "gpio": "latest",
     "serialport": "latest",
-    "jog": "latest",
     "underscore": "latest"
   }
 }
