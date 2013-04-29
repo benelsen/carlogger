@@ -1,0 +1,9 @@
+{
+  "gps": {
+    "device": "/dev/ttyUSB0",
+    "baudrate": 57600
+  },
+  "obd": {
+    "device": "/dev/ttyUSB1"
+  }
+}
